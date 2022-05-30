@@ -1,0 +1,31 @@
+body{
+  background-color:white;
+  background: url("pattern_243_1617568419231.png") repeat;
+}
+p{
+  text-align: right;
+  color: white;
+}
+h2,h1,p {
+  font-family: 'Roboto', sans-serif;stylesheet"
+  text-align: right;
+  font: serif;
+  color: red;
+  
+}
+strong{
+  font-family: 'Caveat', cursive;
+}
+em{
+  color: green;
+  padding: 15px;
+  border-style: double;
+}
+@media print { 
+  body {
+   font-family: Times, 'Times New Roman', serif; 
+  }
+  h1, h2, p, em, strong {
+   color: #000; 
+  }
+ }

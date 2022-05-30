@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Форма</title>
+</head>
+<body>
+<form action="#">
+    <table>
+    <tr>
+        <td>E-mail</td>
+        <td>
+            <input  type="email" 
+                    name="e-mail" 
+                    size="20" 
+                    maxlength="25" 
+                    value=""
+                    placeholder="Введите E-mail"
+                    required="required">
+        </td>
+    </tr>
+    <tr>
+    <td>Password</td>
+        <td>
+        <input  type="Пароль" 
+                name="pass" 
+                size="20" 
+                maxlength="25" 
+                value=""
+                placeholder="Введите пароль"
+                required="required">
+        </td>
+    </tr>
+    <tr>
+    <td>Пол</td>          
+        <td>
+        <input type="radio" name="subject" value="asp">Мужской<br>
+        <input type="radio" name="subject" value="js">Женский
+        </td>
+    </tr>
+    <tr>
+        <td>Дата рождения</td>
+        <td>
+            <input type="date" name="calendar">
+        </td>
+    </tr>
+    <tr>
+    <td>Языки</td>
+        <td>
+            <input type="checkbox" name="asp" value="yes">Английский<br>
+            <input type="checkbox" name="js" value="yes">Русский<br>
+            <input type="checkbox" name="php" value="yes">Немецкий<br>
+            <input type="checkbox" name="html" value="yes">Японский<br>
+        </td>
+    </tr>
+    <tr>
+            <td>Информация о вас</td>    
+            <td><textarea   name="description" 
+                            cols="30" 
+                            rows="10"
+                            placeholder="Введите информацию"
+                            required="required"></textarea></td>
+    </tr>
+    <tr>
+        <td>
+        
+        </td>
+        <td>
+        <input type="submit" value=" Submit ">
+        <input type="reset" value="Clear">
+        </td>
+    </tr>
+    </table>
+</form>
+</body>
+</html>
