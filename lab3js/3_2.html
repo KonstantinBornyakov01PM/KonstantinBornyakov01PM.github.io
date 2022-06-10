@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab3_2</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        let str;
+        str = prompt('Введите строку');
+
+        /**
+         * Возвращает строку str с заглавным первым символом
+         *
+         * @param {string} строка
+         * @return {string} Строку str с заглавным первым символом
+         */
+
+        function ucFirst(str) {
+            // делаем заглавный первый символ и конкатенируем с остальной строкой
+            return str[0].toUpperCase() + str.slice(1);
+        }
+        console.log(ucFirst(str));
+    </script>
+</body>
+
+</html>

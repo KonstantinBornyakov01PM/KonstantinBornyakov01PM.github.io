@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab1_5</title>
+</head>
+<body>
+<script >
+    "use strict";
+
+    let counter = prompt("Введите количество строк");
+    let flag;
+    let dog = 0, cat = 0;
+    let str = "";
+    for(let i = 0; i < counter; i++)
+    {
+        flag=0;
+        while(flag<6)
+        {
+            if (dog<3)
+            {
+                str += "dog ";
+                dog++;
+                flag++;
+            }
+            else if (cat<2)
+            {
+                str += "cat ";
+                cat++;
+                flag++;
+            }
+            else
+            {
+                dog=0;
+                cat=0;
+            }
+        }
+        str +="\n";
+    }
+    console.log("%s", str);
+</script>
+</body>
+</html>

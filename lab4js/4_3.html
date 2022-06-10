@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>lab4_3</title>
+	<script>
+		'use strict';
+		function showBook(){
+			console.log("book:\n");
+			console.log("Title: " + this.title + "\n");
+			console.log("Price: " + this.price + "\n");
+		}
+
+		function isEmpty(obj){
+			return !Object.keys(obj).length;
+		}
+	</script>
+</head>
+<body>
+	<script>
+		'use strict';
+		let book1 = {};
+		console.log("empty Book1 is: " + isEmpty(book1) + "\n");
+		book1 = {
+			title: "Алгебра 8 класс",
+			pubYear: 2019,
+			price: 400,
+			show: function(){
+				console.log("book1:\n");
+				console.log("Title: " + this.title + "\n");
+				console.log("Price: " + this.price + "\n");
+			}
+		};
+		console.log("empty Book1 is: " + isEmpty(book1) + "\n");
+
+		let book2 = {};
+
+		console.log("empty Book2 is: " + isEmpty(book2) + "\n");
+
+		book2 = {
+			title: "Билогия 8 класс",
+			pubYear: 2019,
+			price: 200,
+			show: showBook
+		};
+		console.log("empty Book2 is: " + isEmpty(book2) + "\n");
+	</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab1_4</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        let number;
+        let counter;
+
+        number = prompt("Введите до какого числа выводить простые числа");
+
+
+        for (let i = 2; i <= number; i++) 
+        {
+            counter = 0;
+
+            for (let j = 1; j <= i*2; j++)
+                if(i % (j+1) == 0)
+                    counter++;
+                    
+                if (counter == 1)
+                console.log(i);
+        }
+    </script>
+</body>
+</html>

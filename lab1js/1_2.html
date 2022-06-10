@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab1_2</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        const num = prompt("Сколько ворон?");
+
+        let maxNumber = Math.pow(2,32);
+        if(num >= maxNumber || num < 0){
+            alert("Некорректно ведено количество ворон")
+        }
+
+        if (num % 100 >= 11 && num % 100 <=20){
+            alert("На ветке сидит " + num + " Ворон");
+        }
+        else{
+            let key = num % 10;
+
+        switch (key) {
+
+            case 1:
+                alert("На ветке сидит " + num + " Ворона");
+                break;
+            case 2:
+            case 3:
+            case 4:
+                alert("На ветке сидит " + num + " Вороны");
+                break;
+            case 0:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+                alert("На ветке сидит " + num + " Ворон"); 
+                break;  
+             }
+            }
+  </script>
+</body>
+</html>

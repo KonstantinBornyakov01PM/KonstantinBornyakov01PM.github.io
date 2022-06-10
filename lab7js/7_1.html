@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>lab7_1</title>
+    </head>
+    <body>
+        <select>
+            <option value="Rock">Рок</option>
+            <option value="Blues" selected>Блюз</option>
+        </select>
+        <input type="button" onclick="addOption();" value="Добавить опцию">
+        <p>Выбранная опция: <span id="selectedOption">...</span> </p>
+
+        <script>
+            "use strict";
+            let sel = document.getElementsByTagName("select")[0];
+            let span = document.getElementById("selectedOption");
+
+            span.innerText = sel.selectedOptions[0].innerText;
+
+            sel.onchange = function(){
+                document.getElementById("selectedOption").innerText = this.selectedOptions[0].innerText;
+
+            }
+            function addOption(){
+                sel.options.add(new Option("Классика", "Classic"));
+                sel.value = "Classic";
+                sel.onchange();
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab3_5</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        let str;
+        str = prompt('Введите строку');
+
+        /**
+             * Возвращает усеченную строку str, если ее длина превосходит maxlength
+             *
+             * @param {string} строка
+             * @param {number} максимальная длина строки
+             * @return {string} усеченная строка
+             */
+            
+        function camelize(str)
+        {
+            while (str.includes('-'))
+            {
+                let index;
+                index = str.indexOf('-')
+                str = str.slice(0, index) + str[index+1].toUpperCase() + str.slice(index+2);
+            }
+            return str;
+        }
+
+        console.log(camelize(str));
+    </script>
+</body>
+</html>

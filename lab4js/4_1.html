@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>lab4_1</title>
+</head>
+
+<body>
+	<script>
+            "use strict";
+
+            // 1
+            // Создайте пустой объект book1
+            let book1 = {};
+            // Добавьте объекту свойства: title, pubYear и price c произвольными значениями.
+            book1["title"] = "Великий Гэтсби";
+            book1["pubYear"] = 1925;
+            book1["price"] = 257;
+
+            // Создайте объект book2 и установите свойства title, pubYear и price c произвольными значениями в момент создания объекта
+            let book2 = { title: "Над пропастью во ржи", pubYear: 1951, price: 217 };
+            
+            // Выведите свойства объектов в цикле
+            let keys = Object.keys(book1);
+            for (let i = 0; i < keys.length; i++) {
+                let val = book1[keys[i]];
+                console.log(val);
+
+                val = book2[keys[i]];
+                console.log(val);
+            }
+	</script>
+</body>
+
+</html>

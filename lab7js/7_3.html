@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>lab7_3</title>
+        <style>
+        .hide{
+            display: none;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="divText">...</div>
+        <textarea id="areaText" class="hide"></textarea>
+        <script>
+            "use strict";
+            var div = document.getElementById("divText");
+            var area = document.getElementById("areaText");
+
+            document.onkeydown = function(e){
+                // e=69 s=83 escape=27
+                //alert();
+                if (e.ctrlKey && e.keyCode == 69){
+                    area.value = div.textContent;
+                    div.classList.add("hide");
+                    area.classList.remove("hide");
+                    area.focus();
+                    return false;
+                }
+                else if (e.ctrlKey && e.keyCode == 83){
+                    div.textContent = area.value;
+                    div.classList.remove("hide");
+                    area.classList.add("hide");
+                    return;
+                }else if (e.keyCode == 27){
+                    div.classList.remove("hide");
+                    area.classList.add("hide");
+                    return;
+                }
+            }
+        </script>
+    </body>
+</html>

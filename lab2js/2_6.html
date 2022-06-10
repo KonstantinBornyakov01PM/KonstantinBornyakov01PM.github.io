@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab2_6</title>
+</head>
+
+<html>
+    <head>
+        <script>
+            "use strict";
+            
+            let num = prompt("Введи конечное число :");
+            let cols = prompt("Введи количество колонок :");
+            printNumbers(num, cols);
+
+            /**
+             * Выводит числа от 0 до num в колонки (cols - колонок) : 
+             * порядок сверху вниз слева направо
+             *
+             * @param {number} num должно быть натуральным числом.
+             * @param {number} cols должно быть натуральным числом.
+             */
+            function printNumbers(num, cols)
+            {
+                let row = 0;
+                // для неровной таблицы считаем количесво элементов вместе с пустыми  
+                let sup = num;
+                while (sup % cols != 0)
+                    sup++;
+                while(row * cols < sup)
+                {
+                    // для каждой строчки создадим строку на вывод
+                    let res = "";
+                    for (let j=0; j < cols; j++){
+                        //console.log(((num/cols)*j + row));
+                        let n = ((sup/cols)*j + row);
+                        if (n < num){                        
+                            res += n + "\t";
+                        }
+                    }
+                    console.log(res);
+                    row++;
+                }
+            }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

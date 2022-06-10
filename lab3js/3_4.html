@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab3_4</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        let str;
+        let maxlength;
+        str = prompt('Введите строку');
+        maxlength = prompt('Введите длину строки');
+
+        /**
+         * Возвращает усеченную строку str, если ее длина превосходит maxlength
+         *
+         * @param {string} строка
+         * @param {number} максимальная длина строки
+         * @return {string} усеченная строка
+         */
+
+        function truncate(str, maxlength) {
+            if (str.length > maxlength) {
+                str = str.substr(0, maxlength - 1) + "\u{2026}";
+            }
+            return str;
+        }
+
+        console.log(truncate(str, maxlength));
+    </script>
+</body>
+
+</html>

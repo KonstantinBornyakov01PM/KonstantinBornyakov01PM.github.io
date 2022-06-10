@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab2_5</title>
+</head>
+
+<html>
+    <head>
+        <script>
+            "use strict";
+            let x = prompt("Введи X для сравнения :");
+            x = parseInt(x);
+            let comp_x = compare(x);
+            let y = prompt("Введи Y для сравнения :");
+            y = parseInt(y);
+            alert ("Результат сравнения (" + x + " < " + y + "): " + comp_x(y));
+
+
+            /**
+              * возращается анонимная фун-ия сравнения аргумента y
+              * с x : false если y<x, true если y>x, иначе null
+              * @param {numeric} x - число х 
+              * @returns {function} - функция сравнения
+              * 
+            */
+
+            function compare(x) {
+               let result = function () {        
+               if (y > x) return true
+               else if (y < x) return false
+               else return null;        
+               }
+
+                return result();
+            }
+
+            let x = +prompt("Введите х");
+            let y = +prompt("Введите y");
+            let a = compare(x);
+            alert(a);
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

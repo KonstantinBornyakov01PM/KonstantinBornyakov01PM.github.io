@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab3_7</title>
+</head>
+
+<body>
+        <script>
+            "use strict";
+
+            let arr = [89,-5, 7, 56, 120, -0.1];
+
+            let arrReverseSorted  = arr.slice();
+            
+            arrReverseSorted.sort((a,b) => a-b); //без (a,b) => a-b сортирует как строки, а не числа
+            arrReverseSorted.reverse();
+
+            console.log("In");
+            console.log(arr);
+
+            console.log("Out");
+            console.log(arrReverseSorted);
+
+        </script>
+    </body>
+</html>

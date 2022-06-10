@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab1_3</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        let number = 0;
+        
+        while ( number <= 100){
+            number = prompt("Введите число больше 100");
+            if ( number == null)
+                break;
+             number = Number(number);
+            if (!Number.isFinite(number))
+                number=0;
+        }
+    </script>
+</body>
+</html>

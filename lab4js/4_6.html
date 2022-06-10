@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>lab4_6</title>
+	<script type="text/javascript">
+		'use strict';
+		function getSecondsToday(){
+			let d = new Date();
+			return d.getHours() * 60 * 60 + d.getMinutes() * 60 + d.getSeconds();
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		'use strict';
+		console.log(getSecondsToday() + " секунд вы уже прожили в этом дне");
+	</script>
+</body>
+</html>

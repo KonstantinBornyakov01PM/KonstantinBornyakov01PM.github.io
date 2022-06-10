@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab3_6</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        let fibs = [];
+        let N;
+        let i = 0;
+        N = prompt('Количество элементов: ');
+
+         /**
+             * Возвращает N-ое число Фибоначчи : 
+             * f(n) = f(n-2) + f(n-1), где f(1) = 0, f(2) = 1 
+             *
+             * @param {number} N должно быть натуральным числом.
+             * @return {number} N-ое число Фибоначчи
+             */
+
+        function fib(n)
+            {
+               
+                if (n == 0) return 0;
+                if (n == 1) return 1;
+                let f1 = 0;
+                let f2 = 1;
+                let fn;
+                for(let i = 0; i < n; i++){
+                    fn = f1 + f2;
+                    f1 = f2;
+                    f2 = fn;
+                }
+                return fn;
+            }
+
+        while(i < N)
+        {
+            fibs[i] = fib(i);
+            console.log(fibs[i]);
+            i++;
+        }
+    </script>
+</body>
+</html>

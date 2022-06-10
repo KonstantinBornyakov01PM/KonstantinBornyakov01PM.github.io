@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>lab4_7</title>
+	<script type="text/javascript">
+		'use strict';
+		function formatDate(date){
+			let out;
+
+			if(date.getDate() < 10)
+				out =  '0' + date.getDate() + '.';
+			else
+				out =  date.getDate() + '.';
+
+			if((date.getMonth()+1) < 10)
+				out +=  '0' + (date.getMonth()+1) + '.';
+			else
+				out +=  (date.getMonth()+1) + '.';
+
+			let dubYear = date.getFullYear()%100;
+			if(dubYear == 0)
+				if(date.getFullYear() < 10)
+					out +=  '0' + date.getFullYear();
+				else
+					out +=  date.getFullYear();
+			else{
+				if(dubYear < 10)
+					out +=  '0' + dubYear;
+				else
+					out +=  dubYear;
+			}
+
+			console.log(out);
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		'use strict';
+		let date = new Date();
+		formatDate(date);
+	</script>
+</body>
+</html>

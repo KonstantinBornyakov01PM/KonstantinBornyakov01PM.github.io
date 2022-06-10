@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>lab4_5</title>
+	<script type="text/javascript">
+		'use strict';
+		function compare(a,b){
+			if (a.age > b.age) return 1;
+  			if (a.age == b.age) return 0;
+  			if (a.age < b.age) return -1;
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		'use strict';
+		let vasya = {name: "Вася", age: 23};
+		let masha = {name: "Маша", age: 18};
+		let vova = {name: "Вова", age: 12};
+		
+		let people = [vasya , masha , vova];
+
+		for(let elem in people)
+			console.log(people[elem]);
+		people.sort(compare);
+
+		console.log('\n');
+
+		for(let elem in people)
+			console.log(people[elem]);
+	</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>lab4_4</title>
+	<script type="text/javascript">
+		'use strict';
+
+		function addClass(obj, cls) {
+			let sub = " " + obj.className + " ";
+			if (sub.indexOf(" " + cls + " ") == -1) {
+				obj.className += " " + cls;
+			}
+		}
+
+		function removeClass(obj, cls) {
+			let sub = " " + obj.className + " ";
+			sub = sub.replace(" " + cls + " ", " ");
+			obj.className = sub.trim(" ");
+		}
+	</script>
+</head>
+
+<body>
+	<script type="text/javascript">
+		'use strict';
+		let obj = {
+			className: 'open menu'
+		};
+		for (let elem in obj)
+			console.log(elem + ": " + obj[elem]);
+		let cls = prompt("ADD CLASS: ");
+		if (cls.indexOf(" ") == cls.length)
+		cls = cls.slice(0,cls.indexOf(" "));
+		addClass(obj, cls);
+		for (let elem in obj)
+			console.log(elem + ": " + obj[elem]);
+		
+		cls = prompt("Remove CLASS: ");		
+		removeClass(obj, cls)		
+		for (let elem in obj)
+			console.log(elem + ": " + obj[elem]);
+	</script>
+</body>
+
+</html>

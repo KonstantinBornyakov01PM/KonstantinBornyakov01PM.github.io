@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>lab7_2</title>
+        <style>
+            #in {
+                margin-top: 20px;
+            }
+            ::placeholder{
+                color: blue;
+            }
+            .placeholder{
+                position:absolute;
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <span id="plc" class="placeholder"></span>
+            <input type="text" id="in" data-placeholder="Введите текст" >
+        </div>
+        <script>
+            "use strict";
+            var input = document.getElementById("in");
+            var plc = document.getElementById("plc");
+            input.onfocus = function(){
+                plc.innerText = input.getAttributeNode("data-placeholder").value;
+                input.getAttributeNode("placeholder").value = "";
+            }
+            input.onblur= function(){
+                plc.innerText = "";
+                input.setAttribute("placeholder",  input.getAttributeNode("data-placeholder").value)
+            }
+            window.onload = function(){
+                input.onblur();
+            }
+        </script>
+    </body>
+</html>

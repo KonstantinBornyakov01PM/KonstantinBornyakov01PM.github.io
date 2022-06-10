@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab3_8</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        /**
+         * Возвращает сумму всех своих аргументов :              *
+         * @param {number} N должно быть числом.
+         * @return {number} сумма всех аргументов
+         */
+        function sum(...arr) {
+            let s = 0;
+            for (let i of arr)
+                s += +i;
+            return s;
+        }
+        console.log("sum() = ", sum());
+        console.log("sum(1) = ", sum(1));
+        console.log("sum(1,2) = ", sum(1, 2));
+        console.log("sum(1,2,3) = ", sum(1, 2, 3));
+        console.log("sum(1,2,3,4) = ", sum(1, 2, 3, 4));
+    </script>
+</body>
+
+</html>
