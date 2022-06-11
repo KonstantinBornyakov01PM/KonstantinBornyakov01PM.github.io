@@ -12,11 +12,9 @@
         <script>
             "use strict";
             let x = prompt("Введи X для сравнения :");
-            x = parseInt(x);
-            let comp_x = compare(x);
             let y = prompt("Введи Y для сравнения :");
             y = parseInt(y);
-            alert ("Результат сравнения (" + x + " < " + y + "): " + comp_x(y));
+            alert (compare(x)(y));
 
 
             /**
@@ -36,12 +34,6 @@
 
                 return result();
             }
-
-            let x = +prompt("Введите х");
-            let y = +prompt("Введите y");
-            let a = compare(x);
-            alert(a);
-
         </script>
     </head>
     <body>
