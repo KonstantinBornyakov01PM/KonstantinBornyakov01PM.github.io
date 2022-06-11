@@ -23,7 +23,10 @@
              * @return {number} x, возведённое в n-ную степень.
              */
             function pow(x, n){
-             return x**n   
+             let res = 1;
+                for (let i = 0; i < n; i++)
+                    res *= x;
+                return res; 
             }
         </script>
     </head>
