@@ -18,28 +18,41 @@
              * f(n) = f(n-2) + f(n-1), где f(1) = 0, f(2) = 1 
              *
              * @param {number} N должно быть натуральным числом.
-             * @return {number} N-ое число Фибоначчи
+             * @return {BigInt} N-ое число Фибоначчи
              */
+             function fibs(N) {
+             let a =[];
+             let str = '';
+                 if (!Number.isNaN(N))
+                     if (N == 0)
+                         str == 0;
+                 else
+                     for (let j =0; j < N; ++j) {
+                         a[j] = fib(j);
+                         str += a[j] + ' ';
+                     }
+                 else str = NaN;
+                 return a[j];
 
-        function fib(n)
+        function fib(j)
             {
                
-                if (n == 0) return 0;
-                if (n == 1) return 1;
-                let f1 = 0;
-                let f2 = 1;
+                if (j == 0) return 0n;
+                if (j == 1) return 1n;
+                if (j == 2) return 1n;
+                let f1 = 1n;
+                let f2 = 1n;
                 let fn;
-                for(let i = 0; i < n; i++){
+                for(let i = 3; i <= n; i++){
                     fn = f1 + f2;
                     f1 = f2;
                     f2 = fn;
                 }
-                return fn;
+                if (f2 == 0)
+                f2=0;
+                return f2;
             }
-
-        while(i < N)
-        {
-            fibs[i] = fib(i);
+        { 
             console.log(fibs[i]);
             i++;
         }
