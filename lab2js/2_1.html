@@ -13,7 +13,7 @@
             "use strict";
             let x = prompt("Введи X для x^n :");
             let n = prompt("Введи N для x^n :");
-            alert( pow(x, n) );
+            alert( mpow(x, n) );
             
             /**
              * Возвращает x, возведённое в n-ную степень.
@@ -22,7 +22,7 @@
              * @param {number} n Степень, должна быть натуральным числом.
              * @return {number} x, возведённое в n-ную степень.
              */
-            function pow(x, n){
+            function mpow(x, n){
              let res = 1;
                 for (let i = 0; i < n; i++)
                     res *= x;
