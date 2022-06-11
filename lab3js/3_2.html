@@ -21,6 +21,8 @@
          */
 
         function ucFirst(str) {
+            if (!str) 
+            return str;
             // делаем заглавный первый символ и конкатенируем с остальной строкой
             return str[0].toUpperCase() + str.slice(1);
         }
